@@ -1,0 +1,23 @@
+#header
+  .header-inner
+    %h1
+      = link_to image_tag("img-logo.gif", alt: "SHOJOSKIP 少女スキップ", width: "426", height: "79"), "/"
+    .navi-top
+      %ul
+        %li.navitop1(class="#{val == 'top' ? 'navitop1-on' : ''}")
+          = link_to "TOP", "/" 
+        %li.navitop2(class="#{val == 'news' ? 'navitop2-on' : ''}")
+          = link_to "NEWS", "http://syoujyoskip2.blog77.fc2.com/" 
+        %li.navitop3(class="#{val == 'shows' ? 'navitop3-on' : ''}")
+          = link_to "SHOWS", "shows.html" 
+        %li.navitop4(class="#{val == 'shows' ? 'navitop4-on' : ''}")
+          = link_to "MUSIC", "music.html" 
+        %li.navitop5(class="#{val == 'shows' ? 'navitop5-on' : ''}")
+          = link_to "VIDEO", "video.html" 
+        %li.navitop6(class="#{val == 'shows' ? 'navitop6-on' : ''}")
+          = link_to "GALLERY", "gallery.html" 
+        %li.navitop7(class="#{val == 'shows' ? 'navitop7-on' : ''}")
+          = link_to "CONTACT", "contact.html" 
+      .clear
+        %hr/
+/ header

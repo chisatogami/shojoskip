@@ -54,24 +54,98 @@ margin-bottom:23px;
 .header-inner ul li {
 float:left;
 }
-.navitop1 {
+
+
+.navitop1 a {
+display: block;
+width: 40px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop1.gif);
 margin-right:22px;
 }
-.navitop2 {
+.navitop1 a:hover,
+.navitop1-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop1-on.gif);
+}
+
+.navitop2 a {
+display: block;
+width: 42px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop2.gif);
 margin-right:26px;
 }
-.navitop3 {
+.navitop2 a:hover,
+.navitop2-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop2-on.gif);
+}
+
+.navitop3 a {
+display: block;
+width: 47px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop3.gif);
 margin-right:26px;
 }
-.navitop4 {
+.navitop3 a:hover,
+.navitop3-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop3-on.gif);
+}
+
+.navitop4 a {
+display: block;
+width: 42px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop4.gif);
 margin-right:28px;
 }
-.navitop5 {
+.navitop4 a:hover,
+.navitop4-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop4-on.gif);
+}
+
+.navitop5 a {
+display: block;
+width: 44px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop5.gif);
 margin-right:22px;
 }
-.navitop6 {
+.navitop5 a:hover,
+.navitop5-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop5-on.gif);
+}
+
+.navitop6 a {
+display: block;
+width: 61px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop6.gif);
 margin-right:19px;
 }
+.navitop6 a:hover,
+.navitop5-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop6-on.gif);
+}
+
+.navitop7 a {
+display: block;
+width: 61px;
+height: 112px;
+text-indent: -9999px;
+background: url(http://www.syoujyoskip.com/imgs/img-navitop7.gif);
+}
+.navitop7 a:hover,
+.navitop7-on a {
+background: url(http://www.syoujyoskip.com/imgs/img-navitop7-on.gif);
+}
+
 
 /* contents */
 
@@ -113,14 +187,14 @@ margin-bottom:30px;
 }
 
 #contents .left .red-box {
-	background:url(http://www.syoujyoskip.com/imgs/bg-red.gif) repeat left top;
-	padding-top:15px;
-	font-size:12px;
+background:url(http://www.syoujyoskip.com/imgs/bg-red.gif) repeat left top;
+padding-top:15px;
+font-size:12px;
 }
 
 #contents .left .red-box ul li,
 #contents .left .red-box dl  {
-	margin-bottom:10px;
+margin-bottom:10px;
 }
 
 #contents .left .red-box a:link,
@@ -132,7 +206,7 @@ color:#fff;
 }
 
 #contents .left .sidemenu1{
-	display:inline;
+display:inline;
 margin-left:25px;
 color:#FFF;
 margin-bottom:5px;
@@ -140,7 +214,7 @@ width:175px;
 float:left;
 }
 #contents .left .sidemenu2{
-	display:inline;
+display:inline;
 margin-right:25px;
 color:#FFF;
 margin-bottom:5px;
@@ -240,15 +314,15 @@ margin-right:10px;
 }
 
 #contents .right .ad-box {
-	font-size:10px;
-	color:#999;
-	text-align:right;
-	padding-top:10px;
+font-size:10px;
+color:#999;
+text-align:right;
+padding-top:10px;
 }
 #contents .right .ad-box a:link,
 #contents .right .ad-box a:visited,
 #contents .right .ad-box a:hover {
-	color:#999;
+color:#999;
 }
 
 
