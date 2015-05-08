@@ -4,24 +4,23 @@ title: 少女スキップ SHOJOSKIP
 #header
   .header-inner
     %h1
-      %a{:href => "/"}
-        = image_tag "img-logo.gif", alt: "SHOJOSKIP 少女スキップ", width: "426", height: "79"
+      = link_to image_tag("img-logo.gif", alt: "SHOJOSKIP 少女スキップ", width: "426", height: "79"), "/"
     .navi-top
       %ul
         %li
-          = link_to image_tag("img-navitop1-on.gif", class: "navitop1", alt: "TOP", width: "40", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop1-on.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop1-on.gif';"), "/"
+          = link_to image_tag("img-navitop1-on.gif", class: "navitop1", alt: "TOP", width: "40", height: "112", onmouseout: "this.src='/assets/images/img-navitop1-on.gif';", onmouseover: "this.src='/assets/images/img-navitop1-on.gif';"), "/"
         %li
-          = link_to image_tag("img-navitop2.gif", class: "navitop2", alt: "NEWS", width: "42", height: "112",onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop2.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop2-on.gif';"), "http://syoujyoskip2.blog77.fc2.com/"
+          = link_to image_tag("img-navitop2.gif", class: "navitop2", alt: "NEWS", width: "42", height: "112",onmouseout: "this.src='/assets/images/img-navitop2.gif';", onmouseover: "this.src='/assets/images/img-navitop2-on.gif';"), "http://syoujyoskip2.blog77.fc2.com/"
         %li
-          = link_to image_tag("img-navitop3.gif", class: "navitop3", alt: "SHOWS", width: "47", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop3.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop3-on.gif';"), "shows.html"
+          = link_to image_tag("img-navitop3.gif", class: "navitop3", alt: "SHOWS", width: "47", height: "112", onmouseout: "this.src='/assets/images/img-navitop3.gif';", onmouseover: "this.src='/assets/images/img-navitop3-on.gif';"), "shows.html"
         %li
-          = link_to image_tag("img-navitop4.gif", class: "navitop4", alt: "MUSIC", width: "42", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop4.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop4-on.gif';"), "music.html"
+          = link_to image_tag("img-navitop4.gif", class: "navitop4", alt: "MUSIC", width: "42", height: "112", onmouseout: "this.src='/assets/images/img-navitop4.gif';", onmouseover: "this.src='/assets/images/img-navitop4-on.gif';"), "music.html"
         %li
-          = link_to image_tag("img-navitop5.gif", class: "navitop5", alt: "VIDEO", width: "44", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop5.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop5-on.gif';"), "video.html"
+          = link_to image_tag("img-navitop5.gif", class: "navitop5", alt: "VIDEO", width: "44", height: "112", onmouseout: "this.src='/assets/images/img-navitop5.gif';", onmouseover: "this.src='/assets/images/img-navitop5-on.gif';"), "video.html"
         %li
-          = link_to image_tag("img-navitop6.gif", class: "navitop6", alt: "GALLERY", width: "61", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop6.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop6-on.gif';"), "gallery.html"
+          = link_to image_tag("img-navitop6.gif", class: "navitop6", alt: "GALLERY", width: "61", height: "112", onmouseout: "this.src='/assets/images/img-navitop6.gif';", onmouseover: "this.src='/assets/images/img-navitop6-on.gif';"), "gallery.html"
         %li
-          = link_to image_tag("img-navitop7.gif", class: "navitop7", alt: "CONTACT", width: "61", height: "112", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navitop7.gif';", onmouseover: "this.src='http://www.syoujyoskip.com/imgs/img-navitop7-on.gif';"), "contact.html"
+          = link_to image_tag("img-navitop7.gif", class: "navitop7", alt: "CONTACT", width: "61", height: "112", onmouseout: "this.src='/assets/images/img-navitop7.gif';", onmouseover: "this.src='/assets/images/img-navitop7-on.gif';"), "contact.html"
       .clear
         %hr/
 / header
@@ -29,29 +28,29 @@ title: 少女スキップ SHOJOSKIP
 #contents
   .left
     %h2.btm10
-      = image_tag "http://www.syoujyoskip.com/imgs/img-hl-top-l.jpg", alt: "少女スキップ SHOJOSKIP オフィシャルサイト", height: "626", width: "426"
+      = image_tag "/assets/images/img-hl-top-l.jpg", alt: "少女スキップ SHOJOSKIP オフィシャルサイト", height: "626", width: "426"
       %p.guelllogo
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-guelllogo.gif", alt: "ILLUSTRATION by GUELL MUSTARD", height: "22", width: "101"), "http://www.guellmustard.com/", target: "_blank"
+        = link_to image_tag("/assets/images/img-guelllogo.gif", alt: "ILLUSTRATION by GUELL MUSTARD", height: "22", width: "101"), "http://www.guellmustard.com/", target: "_blank"
       %dl.member
         %dt.btm10
-          = image_tag "http://www.syoujyoskip.com/imgs/img-shojoskipis.gif", alt: "SHOJOSKIP is", height: "16", width: "146"
+          = image_tag "/assets/images/img-shojoskipis.gif", alt: "SHOJOSKIP is", height: "16", width: "146"
         %dd
-          = image_tag "http://www.syoujyoskip.com/imgs/img-member1.gif", alt: "Chisato Vocal Guitar Keyboard", height: "115", width: "83"
+          = image_tag "/assets/images/img-member1.gif", alt: "Chisato Vocal Guitar Keyboard", height: "115", width: "83"
         %dd
-          = image_tag "http://www.syoujyoskip.com/imgs/img-member2.gif", alt: "Kouki Arai Bass", height: "115", width: "91"
+          = image_tag "/assets/images/img-member2.gif", alt: "Kouki Arai Bass", height: "115", width: "91"
         %dd
-          = image_tag "http://www.syoujyoskip.com/imgs/img-member3.gif", alt: "O-isshi Drums", height: "115", width: "74"
+          = image_tag "/assets/images/img-member3.gif", alt: "O-isshi Drums", height: "115", width: "74"
         %dd
-          = image_tag "http://www.syoujyoskip.com/imgs/img-member5.gif", alt: "Takashi Otsuki Guitar,Keyboard", height: "115", width: "76"
+          = image_tag "/assets/images/img-member5.gif", alt: "Takashi Otsuki Guitar,Keyboard", height: "115", width: "76"
       .clear
         %hr
       %p.bio 少女スキップは東京で活動中のバンド。USインディ、オルタナ、ポストロック、シューゲイザーなど、多種多様な音楽に影響を受けながらも、ポップでエモーショナルで「やさしさ」「なつかしさ」を感じる、浮遊感あふれる独自のサウンドを紡ぎだしている。
-      = link_to image_tag("http://www.syoujyoskip.com/imgs/img-bnr-20121112.jpg", class: "btm15", alt: "少女スキップ｜Skream! PICK UP! ROOKIES", border: "0"), "http://skream.jp/pick_up_rookies/2012/11/shojoskip.php", target: "_blank"
+      = link_to image_tag("/assets/images/img-bnr-20121112.jpg", class: "btm15", alt: "少女スキップ｜Skream! PICK UP! ROOKIES", border: "0"), "http://skream.jp/pick_up_rookies/2012/11/shojoskip.php", target: "_blank"
       %iframe{:src => "//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fshojoskip&width=480&height=395&colorscheme=light&show_faces=false&border_color&stream=true&header=false", :scrolling => "no", :frameborder => "0", :style => "border:none; overflow:hidden; width:426px; height:395px;", :allowTransparency => "true"}
   .right
     .red-box
       %h3
-        = image_tag "http://www.syoujyoskip.com/imgs/img-hl-nextshow.gif", class: "btm15", alt: "SHOJOSKIP NEXT SHOW", width: "126", height: "16"
+        = image_tag "/assets/images/img-hl-nextshow.gif", class: "btm15", alt: "SHOJOSKIP NEXT SHOW", width: "126", height: "16"
       .shows
         %p.bold
           2015/04/26(sun)
@@ -80,12 +79,12 @@ title: 少女スキップ SHOJOSKIP
           %br/
           ADV/￥2,000 DOOR/￥2,500
         %p.right-btn
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-more-red.gif", alt: "MORE", width: "78", height: "26"), "shows.html"
+          = link_to image_tag("/assets/images/img-more-red.gif", alt: "MORE", width: "78", height: "26"), "shows.html"
     .gray-box
       %h3.btm15
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-hl-music.gif", class: "btm15", alt: "MUSIC", width: "65", height: "16"), "music.html"
+        = link_to image_tag("/assets/images/img-hl-music.gif", class: "btm15", alt: "MUSIC", width: "65", height: "16"), "music.html"
       %p.cd
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-civilmagazine.png", class: "btn10", alt: "civilmagazine", width: "120"), "http://www.syoujyoskip.com/imgs/img-civilmagazine.png", target: "_blank"
+        = link_to image_tag("/assets/images/img-civilmagazine.png", class: "btn10", alt: "civilmagazine", width: "120"), "/assets/images/img-civilmagazine.png", target: "_blank"
       .cd-right
         %p.bold New Release!
         %br/
@@ -103,11 +102,11 @@ title: 少女スキップ SHOJOSKIP
           %br/
           2014/4/30
         %p.icon.btm10
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-amazon.gif", alt: "tower records", width: "85", height: "20"), "http://www.amazon.co.jp/CIVILMAGAZINE-third-issue-girls-backbone/dp/4990705319/", target: "_blank"
+          = link_to image_tag("/assets/images/img-amazon.gif", alt: "tower records", width: "85", height: "20"), "http://www.amazon.co.jp/CIVILMAGAZINE-third-issue-girls-backbone/dp/4990705319/", target: "_blank"
       .clear
         %hr/
       %p.cd
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/jcss.jpg", class: "btm10", alt: "cruyff in the bedroom 14th Anniverssary[JESUS CRUYFF SUPER STAR]", width: "120", height: "171"), "http://www.onlyfeedback.net/cruyff/news.html"
+        = link_to image_tag("/assets/images/jcss.jpg", class: "btm10", alt: "cruyff in the bedroom 14th Anniverssary[JESUS CRUYFF SUPER STAR]", width: "120", height: "171"), "http://www.onlyfeedback.net/cruyff/news.html"
       .cd-right
         %p.bold Now on sale!
         %br/
@@ -125,11 +124,11 @@ title: 少女スキップ SHOJOSKIP
         %p.font12.btm10
           [Japanese King Of Shoegazer]として世界中にその名を轟かせる日本の至宝[クライフインザベッドルーム]結成１４年を記念して１４組づつ合計２８組による２枚のトリビュートアルバムに参加！
         %p.icon.btm10
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-tower.gif", alt: "tower records", width: "85", height: "20"), "http://tower.jp/item/3262822/JESUS-CRUYFF-SUPER-STAR-Feedback-Noise-Disc", target: "_blank"
+          = link_to image_tag("/assets/images/img-tower.gif", alt: "tower records", width: "85", height: "20"), "http://tower.jp/item/3262822/JESUS-CRUYFF-SUPER-STAR-Feedback-Noise-Disc", target: "_blank"
       .clear
         %hr/
       %p.cd
-        = image_tag "http://www.syoujyoskip.com/imgs/cosodorokitsune.jpg", class: "btm10", alt: "COSODOROKITSUNE-Do you go to steal the tedukurinotori?-", width: "120", height: "120"
+        = image_tag "/assets/images/cosodorokitsune.jpg", class: "btm10", alt: "COSODOROKITSUNE-Do you go to steal the tedukurinotori?-", width: "120", height: "120"
       .cd-right
         %p.bold Now on sale!
         %br/
@@ -143,10 +142,10 @@ title: 少女スキップ SHOJOSKIP
           %br/
           2012/11/14
         %p.icon.btn10
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-tower.gif", alt: "tower records", width: "85", height: "20"), "http://tower.jp/artist/1106502/%E5%B0%91%E5%A5%B3%E3%82%B9%E3%82%AD%E3%83%83%E3%83%97", target: "_blank"
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-union.gif", alt: "union", width: "85", height: "20"), "http://diskunion.net/portal/ct/list/0/72340473", target: "_blank"
+          = link_to image_tag("/assets/images/img-tower.gif", alt: "tower records", width: "85", height: "20"), "http://tower.jp/artist/1106502/%E5%B0%91%E5%A5%B3%E3%82%B9%E3%82%AD%E3%83%83%E3%83%97", target: "_blank"
+          = link_to image_tag("/assets/images/img-union.gif", alt: "union", width: "85", height: "20"), "http://diskunion.net/portal/ct/list/0/72340473", target: "_blank"
         %p.icon.btm10
-          = link_to image_tag("http://www.syoujyoskip.com/imgs/img-itune.gif", alt: "iTune", :witdh => "85", height: "20"), "https://itunes.apple.com/jp/album/cosodorokitsune/id579267524", target: "_blank"
+          = link_to image_tag("/assets/images/img-itune.gif", alt: "iTune", :witdh => "85", height: "20"), "https://itunes.apple.com/jp/album/cosodorokitsune/id579267524", target: "_blank"
           試聴&amp;ダウンロードできます
       .clear
         %hr/
@@ -158,7 +157,7 @@ title: 少女スキップ SHOJOSKIP
         = link_to "少女スキップTwitter", "http://twitter.com/shojoskip"
     .gray-box
       %h3
-        = image_tag "http://www.syoujyoskip.com/imgs/img-hl-video.gif", class: "btm15", alt: "VIDEO", width: "65", height: "16"
+        = image_tag "/assets/images/img-hl-video.gif", class: "btm15", alt: "VIDEO", width: "65", height: "16"
       .btm10
         %iframe{:width => "420", :height => "236", :src => "http://www.youtube.com/embed/lTPJCM4Elzw", :frameborder => "0"}
       .btm10
@@ -166,25 +165,25 @@ title: 少女スキップ SHOJOSKIP
       .btm10
         %iframe{:width => "420", :height => "236", :src => "http://www.youtube.com/embed/Cyd0f0TR00w", :frameborder => "0"}
       %p.right-btn
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-more-gray.gif", alt: "MORE", width: "78", height: "26"), "video.html"
+        = link_to image_tag("/assets/images/img-more-gray.gif", alt: "MORE", width: "78", height: "26"), "video.html"
   .clear
     %hr/
 #footer
   .footer-inner
     %address
-      = image_tag "http://www.syoujyoskip.com/imgs/img-copy.gif", alt: "Copyright c SHOJOSKIP All right reserved.", width: "233", height: "11"
+      = image_tag "/assets/images/img-copy.gif", alt: "Copyright c SHOJOSKIP All right reserved.", width: "233", height: "11"
     %ul
       %li
-        = link_to image_tag("img-navifooter1.gif", alt: "TOP", width: "50", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter1-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter1-on.gif';"), "http://www.syoujyoskip.com/"
+        = link_to image_tag("img-navifooter1.gif", alt: "TOP", width: "50", height: "76", onmouseout: "this.src='/assets/images/img-navifooter1.gif';", onmouseover: "this.src='/assets/images/img-navifooter1-on.gif';"), "http://www.syoujyoskip.com/"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter2.gif", alt: "NEWS", width: "68", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter2-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter2-on.gif';"), "http://syoujyoskip2.blog77.fc2.com/"
+        = link_to image_tag("/assets/images/img-navifooter2.gif", alt: "NEWS", width: "68", height: "76", onmouseout: "this.src='/assets/images/img-navifooter2.gif';", onmouseover: "this.src='/assets/images/img-navifooter2-on.gif';"), "http://syoujyoskip2.blog77.fc2.com/"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter3.gif", alt: "SHOWS", width: "75", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter3-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter3-on.gif';"), "shows.html"
+        = link_to image_tag("/assets/images/img-navifooter3.gif", alt: "SHOWS", width: "75", height: "76", onmouseout: "this.src='/assets/images/img-navifooter3.gif';", onmouseover: "this.src='/assets/images/img-navifooter3-on.gif';"), "shows.html"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter4.gif", alt: "MUSIC", width: "70", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter4-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter4-on.gif';"), "music.html"
+        = link_to image_tag("/assets/images/img-navifooter4.gif", alt: "MUSIC", width: "70", height: "76", onmouseout: "this.src='/assets/images/img-navifooter4.gif';", onmouseover: "this.src='/assets/images/img-navifooter4-on.gif';"), "music.html"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter5.gif", alt: "VIDEO", width: "77", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter5-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter5-on.gif';"), "video.html"
+        = link_to image_tag("/assets/images/img-navifooter5.gif", alt: "VIDEO", width: "77", height: "76", onmouseout: "this.src='/assets/images/img-navifooter5.gif';", onmouseover: "this.src='/assets/images/img-navifooter5-on.gif';"), "video.html"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter6.gif", alt: "GALLERY", width: "68", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter6-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter6-on.gif';"), "gallery.html"
+        = link_to image_tag("/assets/images/img-navifooter6.gif", alt: "GALLERY", width: "68", height: "76", onmouseout: "this.src='/assets/images/img-navifooter6.gif';", onmouseover: "this.src='/assets/images/img-navifooter6-on.gif';"), "gallery.html"
       %li
-        = link_to image_tag("http://www.syoujyoskip.com/imgs/img-navifooter7.gif", alt: "CONTACT", width: "72", height: "76", onmousover: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter7-on.gif';", onmouseout: "this.src='http://www.syoujyoskip.com/imgs/img-navifooter7-on.gif';"), "contact.html"
+        = link_to image_tag("/assets/images/img-navifooter7.gif", alt: "CONTACT", width: "72", height: "76", onmouseout: "this.src='/assets/images/img-navifooter7.gif';", onmouseover: "this.src='/assets/images/img-navifooter7-on.gif';"), "contact.html"
