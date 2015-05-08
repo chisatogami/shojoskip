@@ -4,19 +4,19 @@
       = link_to image_tag("img-logo.gif", alt: "SHOJOSKIP 少女スキップ", width: "426", height: "79"), "/"
     .navi-top
       %ul
-        %li.navitop1(class="#{val == 'top' ? 'navitop1-on' : ''}")
+        %li.top(class="#{val == 'top' ? 'top-on' : ''}")
           = link_to "TOP", "/" 
-        %li.navitop2(class="#{val == 'news' ? 'navitop2-on' : ''}")
+        %li.news(class="#{val == 'news' ? 'news-on' : ''}")
           = link_to "NEWS", "http://syoujyoskip2.blog77.fc2.com/" 
-        %li.navitop3(class="#{val == 'shows' ? 'navitop3-on' : ''}")
+        %li.shows(class="#{val == 'shows' ? 'shows-on' : ''}")
           = link_to "SHOWS", "shows.html" 
-        %li.navitop4(class="#{val == 'shows' ? 'navitop4-on' : ''}")
+        %li.music(class="#{val == 'music' ? 'music-on' : ''}")
           = link_to "MUSIC", "music.html" 
-        %li.navitop5(class="#{val == 'shows' ? 'navitop5-on' : ''}")
+        %li.video(class="#{val == 'video' ? 'video-on' : ''}")
           = link_to "VIDEO", "video.html" 
-        %li.navitop6(class="#{val == 'shows' ? 'navitop6-on' : ''}")
+        %li.gallery(class="#{val == 'gallery' ? 'gallery-on' : ''}")
           = link_to "GALLERY", "gallery.html" 
-        %li.navitop7(class="#{val == 'shows' ? 'navitop7-on' : ''}")
+        %li.contact(class="#{val == 'contact' ? 'contact-on' : ''}")
           = link_to "CONTACT", "contact.html" 
       .clear
         %hr/
