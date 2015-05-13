@@ -1,0 +1,131 @@
+@import "setting";
+
+/* header */
+
+#header  {
+  .header-inner {
+  width: $baseWidth;
+  margin: 0 auto;
+  text-align: left;
+    h1 {
+      float: left;
+      margin: 38px 44px 23px 0;
+    }
+    ul {
+      li {
+        float: left;
+        &.top, &.news, &.shows, &.music, &.video, &.gallery, &.contact {
+          a {
+            display: block;
+            height: 112px;
+            text-indent: -9999px;
+          }
+        }
+        &.top { 
+          a {
+            width: 40px;
+            background-image: url("/assets/images/img-navitop1.gif");
+            margin-right: 22px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop1-on.gif");
+            }
+          }
+        }
+        &.top-on {
+          a {
+            background-image: url("/assets/images/img-navitop1-on.gif");
+          }
+        }
+        &.news {
+          a {
+            width: 42px;
+            background-image: url("/assets/images/img-navitop2.gif");
+            margin-right: 26px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop2-on.gif");
+            }
+          }
+        }
+        &.news-on {
+          a {
+            background-image: url("/assets/images/img-navitop2-on.gif");
+          }
+        }
+        &.shows {
+          a {
+            width: 47px;
+            background-image: url("/assets/images/img-navitop3.gif");
+            margin-right: 26px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop3-on.gif");
+            }
+          }
+        }
+        &.shows-on {
+          a {
+            background-image: url("/assets/images/img-navitop3-on.gif");
+          }
+        }
+        &.music {
+          a {
+            width: 42px;
+            background-image: url("/assets/images/img-navitop4.gif");
+            margin-right: 28px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop4-on.gif");
+            }
+          }
+        }
+        &.music-on {
+          a {
+            background-image: url("/assets/images/img-navitop4-on.gif");
+          }
+        }
+        &.video {
+          a {
+            width: 44px;
+            background-image: url("/assets/images/img-navitop5.gif");
+            margin-right: 22px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop5-on.gif");
+            }
+          }
+        }
+        &.video-on {
+          a {
+            background-image: url("/assets/images/img-navitop5-on.gif");
+          }
+        }
+        &.gallery {
+          a {
+            width: 61px;
+            background-image: url("/assets/images/img-navitop6.gif");
+            margin-right: 19px;
+            &:hover {
+              background-image: url("/assets/images/img-navitop6-on.gif");
+            }
+          }
+        }
+        &.gallery-on {
+          a {
+            background-image: url("/assets/images/img-navitop6-on.gif");
+          }
+        }
+        &.contact {
+          a {
+            width: 61px;
+            background-image: url("/assets/images/img-navitop7.gif");
+            &:hover {
+              background-image: url("/assets/images/img-navitop7-on.gif");
+            }
+          }
+        }
+        &.contact-on {
+          a {
+            background-image: url("/assets/images/img-navitop7-on.gif");
+          }
+        }
+      }
+    }
+  }
+}

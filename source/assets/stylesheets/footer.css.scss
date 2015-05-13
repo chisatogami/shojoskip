@@ -1,0 +1,29 @@
+@import "setting";
+
+/* footer */
+
+#footer {
+  margin: 0 auto;
+  width: $baseWidth;
+  background: url("/assets/images/bg-footer3.gif") no-repeat right bottom #000;
+  height: 76px;
+  text-align: left;
+  .footer-inner {
+    background: url("/assets/images/bg-footer4.gif")  no-repeat 280px bottom;
+    width: 880px;
+    height: 76px;
+  }
+  address {
+    float: left;
+    margin: 33px 156px 0 0;
+    width: 233px;
+  }
+  ul {
+    display: block;
+    width: 480px;
+    float: left;
+    li {
+      float: left;
+    }
+  }
+}

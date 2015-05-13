@@ -1,156 +1,8 @@
 @charset "utf-8";
+@import "setting";
+@import "default";
+@import "header";
 
-/* setting */
-
-$baseFontSize: 12px;
-$baseWidth: 950px;
-
-/* default */
-
-body,h1,h2,h3,h4,h5,h6,p,pre,blockquote,ul,li,ol,dl,dd,table,th,td,tr {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-img {
-  border: none;
-  vertical-align:bottom;
-}
-.btm01{
-  margin-bottom: 1px;
-}
-.btm03{
-  margin-bottom: 3px;
-}
-.btm05{
-  margin-bottom: 5px;
-}
-.btm10{
-  margin-bottom: 10px;
-}
-.btm15{
-  margin-bottom: 15px;
-}
-.btm20{
-  margin-bottom: 20px;
-}
-.btm25{
-  margin-bottom: 25px;
-}
-.btm30{
-  margin-bottom: 30px;
-}
-.btm35{
-  margin-bottom: 35px;
-}
-.btm40{
-  margin-bottom: 40px;
-}
-.btm45{
-  margin-bottom: 45px;
-}
-.btm50{
-  margin-bottom: 50px;
-}
-.clear{
-  clear: both;
-}
-.clear hr{
-  display: none;
-}
-body {
-  border-top: 5px solid #000;
-  text-align: center;
-  background: url("/assets/images/bg-footer.gif") repeat-x left bottom;
-  color: #666;
-  font-size: $baseFontSize + 2px;
-  line-height: 1.3em;
-  font-family: Aller,Verdana,Helvetica,Arial,sans-serif,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
-/* header */
-
-#header  {
-  .header-inner {
-  width: $baseWidth;
-  margin: 0 auto;
-  text-align: left;
-    h1 {
-      float: left;
-      margin: 38px 44px 23px 0;
-    }
-    ul li {
-      float: left;
-    }
-    li.top a, li.news a, li.shows a, li.music a, li.video a, li.gallery a, li.contact a{
-      display: block;
-      height: 112px;
-      text-indent: -9999px;
-    }
-    li.top a {
-      width: 40px;
-      background-image: url("/assets/images/img-navitop1.gif");
-      margin-right: 22px;
-    }
-    li.top a:hover,
-    li.top-on a {
-      background-image: url("/assets/images/img-navitop1-on.gif");
-    }
-    li.news a {
-      width: 42px;
-      background-image: url("/assets/images/img-navitop2.gif");
-      margin-right: 26px;
-    }
-    li.news a:hover,
-    li.news-on a {
-      background-image: url("/assets/images/img-navitop2-on.gif");
-    }
-    li.shows a {
-      width: 47px;
-      background-image: url("/assets/images/img-navitop3.gif");
-      margin-right: 26px;
-    }
-    li.shows a:hover,
-    li.shows-on a {
-      background-image: url("/assets/images/img-navitop3-on.gif");
-    }
-    li.music a {
-      width: 42px;
-      background-image: url("/assets/images/img-navitop4.gif");
-      margin-right: 28px;
-    }
-    li.music a:hover,
-    li.music-on a {
-      background-image: url("/assets/images/img-navitop4-on.gif");
-    }
-    li.video a {
-      width: 44px;
-      background-image: url("/assets/images/img-navitop5.gif");
-      margin-right: 22px;
-    }
-    li.video a:hover,
-    li.video-on a {
-      background-image: url("/assets/images/img-navitop5-on.gif");
-    }
-    li.gallery a {
-      width: 61px;
-      background-image: url("/assets/images/img-navitop6.gif");
-      margin-right: 19px;
-    }
-    li.gallery a:hover,
-    li.gallery-on a {
-      background-image: url("/assets/images/img-navitop6-on.gif");
-    }
-    li.contact a {
-      width: 61px;
-      background-image: url("/assets/images/img-navitop7.gif");
-    }
-    li.contact a:hover,
-    li.contact-on a {
-      background-image: url("/assets/images/img-navitop7-on.gif");
-    }
-  }
-}
 
 /* contents */
 
@@ -167,19 +19,27 @@ body {
   .bold {
     font-weight: bold;
   }
-  .icon img {
-    margin-right: 10px;
+  .icon {
+    img {
+      margin-right: 10px;
+    }
   }
   .left {
     width: 426px;
     float: left;
-    p.guelllogo {
-      text-align: right;
-      margin-bottom: 20px;
+    p {
+      &.guelllogo {
+        text-align: right;
+        margin-bottom: 20px;
+      }
     }
-    dl.member dd {
-      float: left;
-      margin-bottom: 10px;
+    dl {
+      &.member {
+        dd {
+          float: left;
+          margin-bottom: 10px;
+        }
+      }
     }
     .bio {
       font-size: $baseFontSize;
@@ -189,30 +49,31 @@ body {
       background: url("/assets/images/bg-red.gif") repeat left top;
       padding-top: 15px;
       font-size: $baseFontSize;
-      ul li,
-      dl  {
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+      dl {
         margin-bottom: 10px;
       }
-      a:link,
-      a:visited {
-        color: #333;
-      }
-      a:hover {
-        color: #fff;
+      a {
+        &:link,&:visited {
+          color: #333;
+        }
+        &:hover {
+          color: #fff;
+        }
       }
     }
-    .sidemenu1{
+    .sidemenu1,.sidemenu2 {
       display: inline;
       color: #FFF;
       margin: 0 0 5px 25px;
       width: 175px;
       float: left;
     }
-    .sidemenu2{
-      display: inline;
-      color: #FFF;
-      margin: 0 0 5px 25px;
-      width: 175px;
+    .sidemenu2 {
       float: right;
     }
   }
@@ -237,12 +98,14 @@ body {
       padding: 20px 30px;
       color: #FFF;
       margin-bottom:5px;
-      a:link,
-      a:visited {
-        color: #333;
-      }
-      a:hover {
-        color: #fff;
+      a {
+        &:link,
+        &:visited {
+          color: #333;
+        }
+        &:hover {
+          color: #fff;
+        }
       }
     }
     .gray-box{
@@ -250,12 +113,14 @@ body {
       padding: 20px 28px 20px 30px;
       margin-bottom: 5px;
       border: 1px solid #ddd;
-      a:link,
-      a:visited {
-        color: #333;
-      }
-      a:hover {
-        color: #09F;
+      a {
+        &:link,
+        &:visited {
+          color: #333;
+        }
+        &:hover {
+          color: #09F;
+        }
       }
     }
     .pink-box {
@@ -263,46 +128,54 @@ body {
       padding: 20px 30px;
       margin-bottom: 30px;
       border: 1px solid #F36;
-      a:link,
-      a:visited {
-        color: #F36;
-      }
-      a:hover {
-        color: #09F;
+      a {
+        &:link,
+        &:visited {
+          color: #F36;
+        }
+        &:hover {
+          color: #09F;
+        }
       }
     }
     .black-box{
       background: url("/assets/images/bg-gray.gif") repeat left top;
       padding: 20px 30px;
       color: #FFF;
-      a:link,
-      a:visited {
-        color: #fff;
+      a {
+        &:link,
+        &:visited {
+          color: #fff;
+        }
+        &:hover {
+          color: #09F;
+        }
       }
-      a:hover {
-        color: #09F;
+    }
+    ul {
+      &.link {
+        margin-bottom: 15px;
+        font-size: $baseFontSize;
+        li {
+          margin-bottom: 10px;
+          img {
+            margin-right: 10px;
+          }
+        }
       }
-    }
-    ul.link {
-      margin-bottom: 15px;
-      font-size: $baseFontSize;
-    }
-    ul.link li {
-      margin-bottom: 10px;
-    }
-    ul.link li img {
-      margin-right: 10px;
     }
     .ad-box {
       font-size: $baseFontSize - 2px;
       color: #999;
       text-align: right;
       padding-top: 10px;
-    }
-    .ad-box a:link,
-    .ad-box a:visited,
-    .ad-box a:hover {
-      color: #999;
+      a {
+        &:link,
+        &:visited,
+        &:hover {
+          color: #999;
+        }
+      }
     }
   }
   .center-btn {
@@ -310,24 +183,4 @@ body {
   }
 }
 
-/* footer */
-
-#footer {
-  margin: 0 auto;
-  width: $baseWidth;
-  background: url("/assets/images/bg-footer3.gif") no-repeat right bottom #000;
-  height: 76px;
-  text-align: left;
-  .footer-inner {
-    background: url("/assets/images/bg-footer4.gif")  no-repeat 280px bottom;
-    width: 880px;
-    height: 76px;
-  }
-  address {
-    float: left;
-    margin: 33px 156px 0 0;
-  }
-  ul li {
-    float: left;
-  }
-}
+@import "footer";
