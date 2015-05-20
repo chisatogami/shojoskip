@@ -1,0 +1,60 @@
+%h1 SCSSの中で繰り返し処理をする
+%p
+  前回、HAML内で繰り返し処理を行い、ソースのリファクタリングを学びましたが
+  今回はSCSS内での繰り返し処理を学びます。
+  HAML内での繰り返し処理と理論は同じですが、記述方法など異なる点があるので間違いのないように覚えてください。
+%dl
+  %dt 今回修正追加したファイル
+  %dd
+    %ul
+      %li config.rb（修正）
+      %li study.erb（修正）
+      %li study.css.scss（追加）
+      %li study2.html.haml（追加）
+%p
+  今回、よくある連続する要素でそれぞれ異なるスタイルを当てるパターンを例に勉強します。
+  理解しやすい様に前回のナビゲーションのソースを使います。
+
+%h2 サンプル1
+%ul.sample1
+  - navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', 'shows.html'], ['MUSIC', 'music.html'], ['VIDEO', 'video.html'], ['GALLERY', 'gallery.html'], ['CONTACT', 'contact.html']]
+  - for i in 0..navigations.length - 1
+    %li= link_to navigations[i][0], navigations[i][1]
+
+
+%p
+  上記のようなボタン群があるとします。
+  これをそれぞれ異なる背景色を当てるとしたらボタン分のCLASSやIDなどを用意しないと実現できません（study.css.scssの.sample2参照→nth-childでユニーク化してます）
+
+%h2 サンプル2
+%ul.sample2
+  - navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', 'shows.html'], ['MUSIC', 'music.html'], ['VIDEO', 'video.html'], ['GALLERY', 'gallery.html'], ['CONTACT', 'contact.html']]
+  - for i in 0..navigations.length - 1
+    %li= link_to navigations[i][0], navigations[i][1]
+
+%p
+  まぁ同じようなコードを羅列してて勿体ないというのが感じられればOKです。
+
+%h2 サンプル3
+%ul.sample3
+  - navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', 'shows.html'], ['MUSIC', 'music.html'], ['VIDEO', 'video.html'], ['GALLERY', 'gallery.html'], ['CONTACT', 'contact.html']]
+  - for i in 0..navigations.length - 1
+    %li= link_to navigations[i][0], navigations[i][1]
+%p
+  25行必要だったコードが半分以下の10行に縮小できました。
+  SCSS内にもコメントで説明書いてありますが、HAML同様、番号を利用して変化を付けたり配列を定義して利用することができます。
+  ただ、HAMLのように二次元配列は恐らく使えない？（調べてない）
+
+%h2 まとめ
+%p
+  配列を利用すれば応用範囲が広くなりますが、その分コード量やメンテに手間もかかるデメリットがあかります。<br>
+  可能であればインデックス番号だけでプロパティをコントロールするCSSを書くように心がけた方が良いかと思います。<br><br>
+  
+  例）背景画像を繰り返し処理で変えるとき<br>
+  top.jpg, news.jpg, shows.jpg, music.jpg, video.jpg, gallery.jpg, contact.jpg<br>
+  と画像を用意するのではなく<br>
+  nav1.jpg, nav2.jpg, nav3.jpg, nav4.jpg, nav5.jpg, nav6.jpg, nav7.jpg<br>
+  といった名前であれば配列を用意する必要がなくなります。
+    
+    
+

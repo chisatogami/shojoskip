@@ -1,0 +1,68 @@
+
+.sample1, .sample2, .sample3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    background-color: #CCC;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px;
+    a{
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+  }
+}
+.sample2{
+  li{
+    &:nth-child(1){
+      background-color: #ED1A3D;
+    }
+    &:nth-child(2){
+      background-color: #EE7800;
+    }
+    &:nth-child(3){
+      background-color: #FFBE00;
+    }
+    &:nth-child(4){
+      background-color: #4DB56A;
+    }
+    &:nth-child(5){
+      background-color: #0067C0;
+    }
+    &:nth-child(6){
+      background-color: #234794;
+    }
+    &:nth-child(7){
+      background-color: #A260BF;
+    }
+  }
+}
+
+
+.sample3{
+  $bg_color: #A260BF, #234794, #0067C0, #4DB56A, #FFBE00, #EE7800, #ED1A3D;
+  li{
+    @for $i from 1 through length($bg_color){
+      &:nth-child(#{$i}){
+        background-color: #{nth($bg_color, $i)};
+      }
+    }
+  }
+}
+// #{}は変数を文字列の中で動かす魔法（HAMLでも同じ）
+// 配列から値を取得するにはnth(配列名, 番号)
+// SCSSの配列は番号が0からではなく1から始まります
+// length(配列名)で要素の数を取得できます
+// 配列の要素は（ダブル）クオーテーションで括ってもOK

@@ -53,7 +53,7 @@ set :js_dir, 'assets/javascripts'
 
 set :images_dir, 'assets/images'
 
-page "/study.html", :layout => "study"
+page "/study*.html", :layout => "study"
 
 
 # Build-specific configuration
