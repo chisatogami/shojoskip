@@ -1,0 +1,69 @@
+%h1 forを使ってHTMLを繰り返し書く手間を省く
+%ul
+  %li menu1
+  %li menu2
+  %li menu3
+  %li menu4
+  %li menu5
+  %li menu6
+  %li menu7
+%p
+  例えば上記のようなメニューをeachで繰り返し処理すれば以下のコードで済みます
+%ul
+  - for i in 1..7
+    %li menu#{i}
+%p
+  「i」は変数で、1〜7の数字が処理する度に格納されます。
+  じゃぁメニューのタイトルをユニークにしつつ繰り返し処理でどうにかならないの？
+  という疑問が浮かんだらあなたはセンス有りです（謎）
+  その場合は「配列：変数の集合体」を用意することで解決できます。
+%ul
+  - menu = ['TOP', 'NEWS', 'SHOWS', 'MUSIC', 'VIDEO', 'GALLERY', 'CONTACT']
+  - for i in 0..6
+    %li= menu[i]
+%p
+  「menu」という名前の配列を用意し、その中に要素をカンマ区切りで入れます。
+  それぞれの要素にアクセスする方法は
+  配列名[番号]
+  です。
+  ちなみに配列の番号は0から始まりますので、TOPの場合は「menu[0]」であり、CONTACTの場合は「menu[6]」になります。
+  なので、forで回す条件も最初は「1..7」でしたが「0..6」に変えてます。
+  さらに実戦的に攻めるとなると飛び先が欲しくなる訳です（謎）
+- navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', 'shows.html'], ['MUSIC', 'music.html'], ['VIDEO', 'video.html'], ['GALLERY', 'gallery.html'], ['CONTACT', 'contact.html']]
+%p
+  という感じで配列（二次元配列）を用意します。
+  例えばnewsのURLが欲しい場合は
+= navigations[1][1]
+%p
+  musicのリンクテキストが欲しい場合は
+= navigations[3][0]
+%p
+  という具合です。
+  これをforで繰り返し処理すると以下になります。
+%ul
+  - navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', 'shows.html'], ['MUSIC', 'music.html'], ['VIDEO', 'video.html'], ['GALLERY', 'gallery.html'], ['CONTACT', 'contact.html']]
+  - for i in 0..6
+    %li= link_to navigations[i][0], navigations[i][1]
+%p
+  さらにメニューの要素が増えてもイチイチ手を加える必要を無くすには、配列「navigations」の中身の数を「.length」というメソッドを使って取得し、forの繰り返し回数を指定する数字に当てはめてあげれば良い。
+  しかし、この場合lengthで返ってくる値が要素の数である「7」であるため、要素番号が0から始まるために1ずれる。
+  そこで「navigations.length -1」とすることで意図した繰り返し処理回数を実現できます。
+%ul
+  - for i in 0..navigations.length - 1
+    %li= link_to navigations[i][0], navigations[i][1]
+%p
+  次はフォーカス処理と繰り返し処理をミックスして実際のソースにします。
+  変数valはこのhamlに存在していないため便宜上追加しています（実際のheaderには不要）
+  現在のvideoをtopやnewsに変えると、それぞれのliに〜〜-onというクラスが付与されるので試してみてください。
+%ul
+  - val = 'video'
+  - for i in 0..navigations.length - 1
+    %li{class: "#{navigations[i][0].swapcase}#{val == navigations[i][0].swapcase ? ' '+navigations[i][0].swapcase+'-on' : ''}"}
+      = link_to navigations[i][0], navigations[i][1]
+  
+
+  
+
+    
+    
+  

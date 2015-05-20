@@ -21,3 +21,16 @@
       .clear
         %hr/
 / header
+
+-#header
+  .header-inner
+    %h1= link_to image_tag("img-logo.gif", alt: "SHOJOSKIP 少女スキップ", width: "426", height: "79"), "/"
+    .navi-top
+      %ul
+        - navigations = [['TOP', '/'], ['NEWS', 'http://syoujyoskip2.blog77.fc2.com/'], ['SHOWS', '/shows.html'], ['MUSIC', '/music.html'], ['VIDEO', '/video.html'], ['GALLERY', '/gallery.html'], ['CONTACT', 'contact.html']]
+        - for i in 0..navigations.length - 1
+          %li{class: "#{navigations[i][0].swapcase}#{val == navigations[i][0].swapcase ? ' '+navigations[i][0].swapcase+'-on' : ''}"}= link_to navigations[i][0], navigations[i][1]
+      .clear
+        %hr/
+/ header
+

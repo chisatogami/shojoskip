@@ -53,6 +53,9 @@ set :js_dir, 'assets/javascripts'
 
 set :images_dir, 'assets/images'
 
+page "/study.html", :layout => "study"
+
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
